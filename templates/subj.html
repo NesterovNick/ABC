@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Subjects
+{% endblock %}
+
+{% block body %}
+<div>
+<form action = "/Subject" method ="post">
+    <input type="text" name="subj" id="subj" class="form-control" placeholder="Add subjects"><br>
+    <input type="submit"  value="Добавить"><br>
+
+    <h2>Subjects:</h2>
+    {% for el in subjects %}
+    <h4>{{ el.s_name }}</h4>
+    {% endfor %}
+</form>
+</div>
+{% endblock %}

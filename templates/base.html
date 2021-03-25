@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div>
+      <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark" href="/">Main page</a>
+          <a class="p-2 text-dark" href="/Schedule">Schedule</a>
+          <a class="p-2 text-dark" href="/Subject">Add subject</a>
+          <a class="p-2 text-dark" href="/TeachName">Add teachers</a>
+          <a class="p-2 text-dark" href="/create-teacher">Add note</a>
+      </nav>
+
+    </div>
+    {% block body %}{% endblock %}
+
+
+
+      </div>
+    </div>
+</body>
+</html>
